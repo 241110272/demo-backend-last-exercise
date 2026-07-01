@@ -65,7 +65,9 @@ async function initializeDatabase() {
 
 // Routes
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.json({
+        message: 'Welcome to Express-MySQL API on Railway!'
+    });
 });
 
 app.get('/quotes', (req, res) => {
